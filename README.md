@@ -1,29 +1,30 @@
-<h1> Simple Website Aboout Me</h1>
+<h1> NYC Taxi Predictions </h1>
 
 <h2>Description</h2>
-This is very simple website created to let you know a bit more about me, created using HTML and a bit of Java. 
+This was my entry for the Taxi Trip Fare Prediction Challenge hosted by Gaurav Dutta on Kaggle: "This hackathon provides a historical dataset to participants that includes records of taxi trip details and fares of those trips. Using this dataset, the participants need to build machine learning models for predicting the trip fare based on the given other useful features of the trip." (Dutta, 2022). 
 <br />
 
 
-<h2>Languages and Utilities Used</h2>
+<h2>Languages</h2>
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>Python</b>
 
-<h2>Environments Used </h2>
+<h2>Code</h2>
+<b>Check out my Python Code here for a closer look</b>
 
-- <b>Windows 10</b> (21H2)
 
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Select the disk:  <br/>
+Cleaning the data: <br/>
+ <b>With nearly 55 million data points, we needed to ensure all outliers, missing values, and obvious mistakes were removed from the set.</b>
+<img width="400" alt="Screenshot 2025-05-22 at 14 49 07" src="https://github.com/user-attachments/assets/934ffc07-aa21-4867-a722-0dfb3ed89c0b" /><img width="451" alt="Screenshot 2025-05-22 at 14 50 13" src="https://github.com/user-attachments/assets/48d242b3-ea74-49d2-9bd1-0a78e2d38bd9" />
+
+</br>
+Categorizing the distance and fare values:  <br/>
 <img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
+
 <br />
 Enter the number of passes: <br/>
 <img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
