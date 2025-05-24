@@ -1,70 +1,80 @@
-<h1> NYC Taxi Predictions </h1>
+# NYC Taxi Fare Predictions 🚖💵
 
-<h2>Description</h2>
-This was my entry for the Taxi Trip Fare Prediction Challenge hosted by Gaurav Dutta on Kaggle: "This hackathon provides a historical dataset to participants that includes records of taxi trip details and fares of those trips. Using this dataset, the participants need to build machine learning models for predicting the trip fare based on the given other useful features of the trip." (Dutta, 2022). 
-<br />
+## 📝 Description  
+Entry for the **Taxi Trip Fare Prediction Challenge** (hosted by Gaurav Dutta on Kaggle):  
+> *"This hackathon provides a historical dataset of NYC taxi trip details and fares. Participants must build ML models to predict trip fares using relevant trip features."*  
+*(Dutta, 2022)*  
+
+---
+
+## 🛠️ Technologies  
+- **Python** (Pandas, NumPy, Scikit-learn, Matplotlib/Seaborn)  
+- **Machine Learning**: K-Means Clustering, Decision Trees  
+- **Data Analysis**: Entropy Calculation, Outlier Detection  
+
+---
+
+## 🚀 Key Steps  
+
+### 1. Data Cleaning 🧹  
+Processed **55M+ records** by:  
+- Removing missing values  
+- Filtering unrealistic fares/distances (e.g., $0 trips, extreme outliers)  
+- Visualizing distributions for validation  
+
+| Before Cleaning | After Cleaning |
+|----------------|----------------|
+| <img src="https://github.com/user-attachments/assets/934ffc07-aa21-4867-a722-0dfb3ed89c0b" width="300"> | <img src="https://github.com/user-attachments/assets/48d242b3-ea74-49d2-9bd1-0a78e2d38bd9" width="300"> |
+
+---
+
+### 3. Feature Correlation Analysis 🔗
+
+Before building fare predictions, I analyzed potential relationships between fare amounts and other variables to identify useful features:
+
+#### Key Insights:
+- **Passenger Count**: Minimal correlation with fare amount  
+- **Time of Day**: Slightly higher fares during night hours  
+- **Weekdays vs Weekends**: No significant fare differences  
+
+#### Correlation Visualizations:
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/c458cfff-c97e-4897-a718-0603aa43f482" width="280" alt="Passenger Count vs Fare">
+  <img src="https://github.com/user-attachments/assets/41733e24-20ee-45f3-827d-53bb56d2de8e" width="280" alt="Day/Night Fare Distribution">
+  <img src="https://github.com/user-attachments/assets/c2bdfb90-1e91-4f43-9dfc-4f45b610d69f" width="280" alt="Weekday Fare Patterns">
+</div>
+
+#### Findings:
+- Distance showed the **strongest correlation (0.82)** with fare amount  
+- Other features had correlations < 0.1 and were excluded from final models  
+- Visual analysis confirmed machine learning feature importance results
 
 
-<h2>Languages</h2>
-
-- <b>Python</b>
-
-<h2>Code</h2>
-<b>Check out my Python Code here for a closer look</b>
 
 
-<h2>Program walk-through:</h2>
+### 2. Distance & Fare Categorization 📊  
+**Distance Ranges (km):**  
+- `0-5` km  
+- `5-10` km  
+- `10-15` km  
+- `15-20` km  
 
-<p align="center">
-<h3>Cleaning The Dataset</h3>
- <b>With nearly 55 million data points, we needed to ensure all outliers, missing values, and obvious mistakes were removed from the set.</b>
-<img width="400" alt="Screenshot 2025-05-22 at 14 49 07" src="https://github.com/user-attachments/assets/934ffc07-aa21-4867-a722-0dfb3ed89c0b" /><img width="451" alt="Screenshot 2025-05-22 at 14 50 13" src="https://github.com/user-attachments/assets/48d242b3-ea74-49d2-9bd1-0a78e2d38bd9" />
+**Fare Ranges ($):**  
+| Distance (km) | Fare Range ($) |  
+|--------------|---------------|  
+| 0-5          | 2.5 - 23.0     |  
+| 5-10         | 6.0 - 37.87    |  
+| 10-15        | 17.7 - 45.0    |  
+| 15-20        | 26.5 - 57.54   |  
 
-</br>
-<h3>Catagoizing The Dataset</h3>
+---
 
-<b>I categorized the distances in 4 range categories using the graph below:</b>
-<b>“0km-5km”</br>
-<b>“5km-10km”</br>
-<b>“10km-15km”</br>
-<b>“15km-20km”</br>
+### 3. Entropy Analysis 🔍  
+Calculated **Shannon Entropy** to quantify uncertainty:  
+- **80% confidence** in predicting fare given distance (or vice versa)  
 
-<b>I then categorized the fare ranges into 4 different categories</b>
-<b>“$2.5-$23.0” for distance between 0km-5km</br>
-<b>“6.0-$37.87” for distance between 5km-10km</br>
-<b>“17.7-$45.0” for distance between 10km-15km</br>
-<b>“$26.5-$57.54” for distance between 15km-20km</br>
+<img src="https://github.com/user-attachments/assets/2656487d-25fd-4937-bc7f-d743d2e0cbf2" width="500">  
 
-<h3>Calculating Entropy</h3>
+---
 
-
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-
-<!--
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
---!>
+## 📂 Repository Structure  
