@@ -1,7 +1,7 @@
 # NYC Taxi Fare Predictions 🚖💵
 
 ## 📝 Description  
-Entry for the **Taxi Trip Fare Prediction Challenge** (hosted by Gaurav Dutta on Kaggle):  
+Entry for the **Taxi Trip Fare Prediction Challenge** (hosted by Gaurav Dutta on Kaggle): https://www.kaggle.com/datasets/gauravduttakiit/taxi-trip-fare-prediction-challenge?resource=download
 > *"This hackathon provides a historical dataset of NYC taxi trip details and fares. Participants must build ML models to predict trip fares using relevant trip features."*  
 *(Dutta, 2022)*  
 
